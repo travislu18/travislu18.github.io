@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Sophia);
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body{
   background-color: #D6D9CE;
   padding: 0px;
@@ -13,40 +12,66 @@ body{
   float: right;
   writing-mode: vertical-rl;
   height: 100vh;
+  width: 16vw;
   position: fixed;
   right: 0px;
 }
 
 .content-bar li{
+  display: flex;
+  justify-content: center;
   text-align: center;
-  padding: 20px;
+  align-items: center;
+  padding: 0px;
+  width: 25%
 }
 
 .content-bar li a{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   text-decoration: none;
   font-family: "DejaVu Sans Mono", monospace;
   color: #000;
+  height: 100%;
+  width: 100%;
 }
 
 
+.intro{
+  padding-left: 20vh;
+  padding-top: 20vh;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.intro p {
+  background-image: url(../images/chatbubble.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+}
 
 /* Animation */
-.movement {
+.intro h1 {
   margin: 0px;
   padding: 0px;
-  border-right: solid 3px rgba(0,255,0,.75);
+  font-size: 100px;
+  font-weight: 200;
+  border-right: solid 3px rgba(0,0,0,.75);
   overflow: hidden;
   white-space: nowrap;
-  font-family: 'Sophia', "DejaVu Sans Mono", monospace;  
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
+  animation: animated-text 0.8s steps(11,end) 1s 1 normal both,
+             animated-cursor 600ms steps(11,end) infinite;
 }
 
 /* text animation */
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 472px;}
+  to{width: 305px;}
 }
 
 /* cursor animations */
