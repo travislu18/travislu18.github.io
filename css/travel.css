@@ -76,16 +76,22 @@ body{
     font-family: "DejaVu Sans Mono", monospace;
     padding: 0px; 
     margin: 50px;
-    font-size: 35px;
-    display: inline-block;
-    text-align: center;
+    display: inline-block; 
+    position: relative;    
 }
 
-.place:hover{
-    border-width: 3px;
-    border-color: #000;
-    border-style: solid;
-    margin: 47px;
+.place-title {
+    padding: 0px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 50px 0px 0px 50px;   
+    transition: 0.25s background-color ease-in-out;
+}
+
+.place-title:hover{
+    background-color: #9d9eac;
 }
 
 .place img {
@@ -99,4 +105,32 @@ body{
 
 .place p {
     margin: 0px;
+}
+
+.location-description {
+    /*display: none;*/
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width: 150%;
+    height: 100%;
+    background-color: #9d9eac;
+    border-radius: 0px 50px 50px 0px;
+    opacity: 0.00;
+	cursor: pointer;
+    z-index: -1;
+	transition: 0.25s opacity ease-in-out;
+}
+
+.location-description div {
+    padding-top: 5%;
+}
+
+.location-description div p {
+    display: inline;
+}
+
+.place:hover .location-description{
+    opacity: 1.00;
+    z-index: 1;
 }
